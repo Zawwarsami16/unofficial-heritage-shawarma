@@ -1,0 +1,90 @@
+COPY-PASTE THESE COMMITS IN ORDER
+(open PowerShell in your hs-v6 folder)
+
+--------------------------------------
+STEP 1 — git init and first commits
+--------------------------------------
+
+git init
+git add src/main.jsx src/App.jsx vite.config.js package.json index.html
+git commit -m "init vite react project"
+
+git add src/index.css
+git commit -m "base styles, color variables, fonts"
+
+git add src/context/Store.jsx src/data/data.js
+git commit -m "add store and menu data"
+
+git add src/hooks/layout.jsx
+git commit -m "layout hook for nav/announcement height tracking"
+
+git add src/components/Nav.jsx
+git commit -m "nav component, still need to fix mobile"
+
+git add src/components/Cursor.jsx src/components/Effects.jsx
+git commit -m "cursor trail and visual effects"
+
+git add src/components/SplitText.jsx src/components/SmoothScroll.jsx
+git commit -m "split text animations, lenis smooth scroll setup"
+
+git add src/components/HeroGL.jsx
+git commit -m "webgl fire hero — three.js instanced particles"
+
+git add src/components/Widgets.jsx
+git commit -m "cart sidebar and ai chat widget"
+
+git add src/components/LoyaltyCard.jsx
+git commit -m "loyalty card component with 3d tilt effect"
+
+git add src/components/Terminal.jsx
+git commit -m "terminal/code block components for deploy page"
+
+git add src/pages/Home.jsx
+git commit -m "home page — hero, featured dishes, reviews, faq"
+
+git add src/pages/Menu.jsx
+git commit -m "menu page with filters and search"
+
+git add src/pages/About.jsx
+git commit -m "about page"
+
+git add src/pages/AllPages.jsx
+git commit -m "catering, contact, loyalty, receipt, admin pages"
+
+git add src/pages/Games.jsx
+git commit -m "games page — ttt, scramble, trivia, snake"
+
+git add src/pages/QRMenu.jsx
+git commit -m "qr menu page for in-restaurant use"
+
+git add src/pages/Deploy.jsx
+git commit -m "deploy guide page"
+
+git add .
+git commit -m "fix nav overlap with announcement bar"
+
+git add .
+git commit -m "image upload in admin panel, cloudinary url support"
+
+git add .
+git commit -m "build cleanup before going live"
+
+--------------------------------------
+STEP 2 — connect to GitHub
+--------------------------------------
+
+(replace YOUR_USERNAME with your actual GitHub username)
+
+git branch -M main
+git remote add origin https://github.com/YOUR_USERNAME/heritage-shawarma.git
+git push -u origin main
+
+--------------------------------------
+STEP 3 — deploy to GitHub Pages
+--------------------------------------
+
+npm install
+npm run deploy
+
+(wait 2-3 min then visit:)
+https://YOUR_USERNAME.github.io/heritage-shawarma/
