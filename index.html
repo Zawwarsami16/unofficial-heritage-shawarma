@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Heritage Shawarma — Oshawa's Finest Halal</title>
+  <meta name="description" content="Authentic halal shawarma in Oshawa, Ontario. Heritage recipes. Carved fresh. Since 2015."/>
+
+  <!-- DNS prefetch + preconnect — kill DNS latency -->
+  <link rel="dns-prefetch"    href="https://fonts.googleapis.com"/>
+  <link rel="dns-prefetch"    href="https://fonts.gstatic.com"/>
+  <link rel="preconnect"      href="https://fonts.googleapis.com" crossorigin/>
+  <link rel="preconnect"      href="https://fonts.gstatic.com"    crossorigin/>
+
+  <!-- Font — display=swap so text shows immediately in fallback, swaps when loaded -->
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;0,9..144,900;1,9..144,300;1,9..144,700;1,9..144,900&family=Outfit:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"/>
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🫔</text></svg>"/>
+
+  <!-- Cinematic loading screen — shown before React hydrates -->
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    html,body{background:#03020C;min-height:100vh}
+
+    #loader{
+      position:fixed;inset:0;z-index:99999;
+      background:#03020C;
+      display:flex;flex-direction:column;
+      align-items:center;justify-content:center;
+      gap:0;
+      transition:opacity .55s cubic-bezier(.76,0,.24,1), transform .55s cubic-bezier(.76,0,.24,1);
+    }
+    #loader.done{opacity:0;transform:translateY(-8px);pointer-events:none}
+
+    .l-logo{
+      font-family:Georgia,serif;
+      font-size:clamp(32px,6vw,56px);
+      font-weight:900;
+      font-style:italic;
+      color:#F4ECD8;
+      letter-spacing:-2px;
+      line-height:1;
+      margin-bottom:6px;
+      opacity:0;
+      transform:translateY(14px);
+      animation:lup .6s .1s cubic-bezier(.16,1,.3,1) forwards;
+    }
+    .l-sub{
+      font-family:system-ui,sans-serif;
+      font-size:9px;
+      font-weight:600;
+      letter-spacing:5px;
+      text-transform:uppercase;
+      color:rgba(244,236,216,0.28);
+      opacity:0;
+      animation:lup .5s .3s ease forwards;
+    }
+    .l-bar{
+      width:120px;height:1px;
+      background:rgba(244,236,216,0.08);
+      margin-top:28px;
+      overflow:hidden;
+      opacity:0;
+      animation:lup .4s .45s ease forwards;
+    }
+    .l-fill{
+      height:100%;
+      background:linear-gradient(to right,#FF5C1A,#E8C040);
+      animation:lfill 1.1s .5s cubic-bezier(.16,1,.3,1) forwards;
+      transform:scaleX(0);
+      transform-origin:left;
+    }
+    @keyframes lup{to{opacity:1;transform:none}}
+    @keyframes lfill{to{transform:scaleX(1)}}
+  </style>
+
+  <script>
+    // Hide loader once React fires first paint
+    window.__loaderDone = function(){
+      var l=document.getElementById('loader');
+      if(!l)return;
+      l.classList.add('done');
+      setTimeout(function(){l.remove()},600);
+    }
+    // Fallback — force remove after 3s even if React is slow
+    setTimeout(window.__loaderDone, 3000);
+  </script>
+</head>
+<body>
+  <!-- Loader — visible instantly, no font dependency -->
+  <div id="loader">
+    <div class="l-logo">Heritage</div>
+    <div class="l-sub">Oshawa · Since 2015</div>
+    <div class="l-bar"><div class="l-fill"></div></div>
+  </div>
+
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+</html>
