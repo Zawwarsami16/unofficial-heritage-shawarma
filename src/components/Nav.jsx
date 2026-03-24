@@ -46,8 +46,7 @@ export function Nav() {
       >
         {/* Brand */}
         <Link to="/" className="nav-logo">
-          <div className="nav-icon">HS</div>
-          <span className="nav-wordmark">Heritage Shawarma</span>
+          <img src="/unofficial-heritage-shawarma/logo.png" alt="Heritage Shawarma" className="nav-logo-img" />
         </Link>
 
         {/* Center links */}
@@ -143,9 +142,7 @@ export function StickyBar() {
         <div className="sb-pulse" />
         {state.storeOpen ? 'Open Now' : 'Closed'}
       </div>
-      <div style={{ fontFamily:'var(--ff-display)', fontSize:13, fontWeight:600, color:'var(--muted)' }}>
-        Heritage Shawarma · Oshawa
-      </div>
+      <img src="/unofficial-heritage-shawarma/logo.png" alt="Heritage Shawarma" style={{ height:28, filter:'brightness(0) invert(1)' }} />
       <div style={{ display:'flex', gap:8 }}>
         <button className="btn btn-outline btn-sm" onClick={() => window.location.href = 'tel:2899800149'}>☎ Call</button>
         <button className="btn btn-primary btn-sm" onClick={() => dispatch({ type:'CART_OPEN', open:true })}>
@@ -189,7 +186,7 @@ export function Footer() {
     <footer className="footer">
       <div className="footer-grid">
         <div>
-          <div className="f-brand">Heritage Shawarma</div>
+          <img src="/unofficial-heritage-shawarma/logo.png" alt="Heritage Shawarma" style={{ height:48, marginBottom:12, filter:'brightness(0) invert(1) sepia(1) saturate(2) hue-rotate(5deg)' }} />
           <p className="f-desc">Authentic halal Middle Eastern cuisine. Crafted fresh daily. Oshawa & Durham Region since 2015.</p>
           <a href="tel:2899800149" style={{ fontFamily:'var(--ff-display)', fontSize:19, color:'var(--gold2)', letterSpacing:1 }}>(289) 980-0149</a>
         </div>

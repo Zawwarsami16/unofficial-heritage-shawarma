@@ -111,6 +111,9 @@ export default function Home() {
         <div className="hero-grad" />
 
         <div className="hero-content">
+          {/* Logo */}
+          <img src="/unofficial-heritage-shawarma/logo.png" alt="Heritage Shawarma" className="h-a0" style={{ height:60, width:'auto', filter:'brightness(0) invert(1)', marginBottom:12 }} />
+
           {/* Eyebrow */}
           <div className="hero-eyebrow h-a0">
             <span style={{ color: 'var(--fire)' }}>●</span>
@@ -293,14 +296,14 @@ export default function Home() {
 
       {}
       <section className="sec" style={{ position: 'relative', overflow: 'hidden' }}>
-        {/* HS watermark */}
-        <div aria-hidden style={{
-          position: 'absolute', right: -60, top: '50%',
+        {/* Logo watermark */}
+        <img aria-hidden src="/unofficial-heritage-shawarma/logo.png" alt="" style={{
+          position: 'absolute', right: -100, top: '50%',
           transform: 'translateY(-50%)',
-          fontFamily: 'var(--ff-display)', fontSize: 400, fontWeight: 900,
-          color: 'rgba(255,92,26,0.02)', lineHeight: 1,
-          pointerEvents: 'none', userSelect: 'none', letterSpacing: -20,
-        }}>HS</div>
+          width: 600, opacity: 0.04,
+          pointerEvents: 'none', userSelect: 'none',
+          filter: 'brightness(10)',
+        }} />
 
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 100, alignItems: 'center', position: 'relative', zIndex: 1 }}>
           {/* Left text */}

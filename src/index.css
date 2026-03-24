@@ -127,6 +127,8 @@ button, input, textarea, select { font-family: var(--ff-body); }
   border-color: var(--line2);
 }
 .nav-logo { display: flex; align-items: center; gap: 12px; justify-self: start; }
+.nav-logo-img { height: 36px; width: auto; filter: brightness(0) invert(1); transition: filter .3s, transform .3s; }
+.nav-logo:hover .nav-logo-img { filter: brightness(0) invert(1) sepia(1) saturate(3) hue-rotate(5deg); transform: scale(1.05); }
 .nav-icon {
   width: 34px; height: 34px;
   background: linear-gradient(135deg, var(--fire), var(--gold2));
