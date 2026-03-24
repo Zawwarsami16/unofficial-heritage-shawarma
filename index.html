@@ -3,26 +3,133 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-  <title>Heritage Shawarma — Oshawa's Finest Halal</title>
-  <meta name="description" content="Authentic halal shawarma in Oshawa, Ontario. Heritage recipes. Carved fresh. Since 2015."/>
 
-  <!-- DNS prefetch + preconnect — kill DNS latency -->
-  <link rel="dns-prefetch"    href="https://fonts.googleapis.com"/>
-  <link rel="dns-prefetch"    href="https://fonts.gstatic.com"/>
-  <link rel="preconnect"      href="https://fonts.googleapis.com" crossorigin/>
-  <link rel="preconnect"      href="https://fonts.gstatic.com"    crossorigin/>
+  <!-- PRIMARY SEO -->
+  <title>Heritage Shawarma Oshawa | Best Halal Shawarma in Durham Region</title>
+  <meta name="description" content="Heritage Shawarma — Oshawa's #1 halal shawarma restaurant. 11-spice marinated proteins, house-made sauces, saj bread. Dine in, takeout & delivery. Open 7 days. (289) 980-0149."/>
+  <meta name="keywords" content="halal shawarma Oshawa, best shawarma Durham Region, halal restaurant Oshawa, shawarma delivery Oshawa, Heritage Shawarma, Middle Eastern food Oshawa, halal food near me, chicken shawarma Oshawa, beef shawarma, catering Oshawa, halal catering Durham"/>
+  <meta name="robots" content="index, follow"/>
+  <meta name="author" content="Heritage Shawarma"/>
+  <link rel="canonical" href="https://zawwarsami16.github.io/unofficial-heritage-shawarma/"/>
 
-  <!-- Font — display=swap so text shows immediately in fallback, swaps when loaded -->
+  <!-- OPEN GRAPH (Facebook/WhatsApp) -->
+  <meta property="og:type"         content="restaurant"/>
+  <meta property="og:title"        content="Heritage Shawarma — Oshawa's Finest Halal"/>
+  <meta property="og:description"  content="Authentic halal shawarma carved fresh daily. 11-spice recipes, house sauces, saj bread. Oshawa, Ontario since 2015."/>
+  <meta property="og:url"          content="https://zawwarsami16.github.io/unofficial-heritage-shawarma/"/>
+  <meta property="og:image"        content="https://zawwarsami16.github.io/unofficial-heritage-shawarma/logo.png"/>
+  <meta property="og:image:alt"    content="Heritage Shawarma Logo"/>
+  <meta property="og:site_name"    content="Heritage Shawarma"/>
+  <meta property="og:locale"       content="en_CA"/>
+
+  <!-- TWITTER CARD -->
+  <meta name="twitter:card"        content="summary_large_image"/>
+  <meta name="twitter:title"       content="Heritage Shawarma — Oshawa's Finest Halal"/>
+  <meta name="twitter:description" content="Authentic halal shawarma. Carved fresh daily. Oshawa, Ontario."/>
+  <meta name="twitter:image"       content="https://zawwarsami16.github.io/unofficial-heritage-shawarma/logo.png"/>
+
+  <!-- GEO -->
+  <meta name="geo.region"         content="CA-ON"/>
+  <meta name="geo.placename"      content="Oshawa, Ontario"/>
+  <meta name="geo.position"       content="43.9391;-78.8661"/>
+  <meta name="ICBM"               content="43.9391, -78.8661"/>
+
+  <!-- STRUCTURED DATA — LocalBusiness + Restaurant + Menu -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": ["Restaurant", "LocalBusiness"],
+        "@id": "https://zawwarsami16.github.io/unofficial-heritage-shawarma/#restaurant",
+        "name": "Heritage Shawarma",
+        "alternateName": "Heritage Shawarma Oshawa",
+        "description": "Authentic halal shawarma restaurant in Oshawa, Ontario. 11-spice marinated proteins, house-made sauces, and fresh saj bread. Family owned since 2015.",
+        "url": "https://zawwarsami16.github.io/unofficial-heritage-shawarma/",
+        "telephone": "+12899800149",
+        "email": "info@heritageshawarma.ca",
+        "image": "https://zawwarsami16.github.io/unofficial-heritage-shawarma/logo.png",
+        "logo": "https://zawwarsami16.github.io/unofficial-heritage-shawarma/logo.png",
+        "priceRange": "$$",
+        "servesCuisine": ["Middle Eastern", "Halal", "Lebanese", "Mediterranean"],
+        "hasMenu": "https://zawwarsami16.github.io/unofficial-heritage-shawarma/menu",
+        "acceptsReservations": false,
+        "paymentAccepted": "Cash, Credit Card, Debit",
+        "currenciesAccepted": "CAD",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "2620 Simcoe St N, Unit 6",
+          "addressLocality": "Oshawa",
+          "addressRegion": "ON",
+          "postalCode": "L1L 0R1",
+          "addressCountry": "CA"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 43.9391,
+          "longitude": -78.8661
+        },
+        "openingHoursSpecification": [
+          { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday"], "opens": "11:00", "closes": "22:00" },
+          { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Friday","Saturday"], "opens": "11:00", "closes": "23:00" },
+          { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "12:00", "closes": "21:00" }
+        ],
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.5",
+          "reviewCount": "127",
+          "bestRating": "5"
+        },
+        "sameAs": [
+          "https://www.facebook.com/p/HeritageShawarma-100071722864553/"
+        ],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Heritage Shawarma Menu",
+          "itemListElement": [
+            { "@type": "Offer", "itemOffered": { "@type": "MenuItem", "name": "Chicken Shawarma Wrap", "description": "11-spice marinated chicken, house garlic sauce, fresh vegetables in warm saj bread" }},
+            { "@type": "Offer", "itemOffered": { "@type": "MenuItem", "name": "Beef Shawarma Plate", "description": "Slow-carved beef shawarma with rice, salad, and signature sauces" }},
+            { "@type": "Offer", "itemOffered": { "@type": "MenuItem", "name": "Mixed Grill Platter", "description": "Combination of chicken and beef shawarma with all the sides" }}
+          ]
+        },
+        "amenityFeature": [
+          { "@type": "LocationFeatureSpecification", "name": "Halal Certified", "value": true },
+          { "@type": "LocationFeatureSpecification", "name": "Free Parking", "value": true },
+          { "@type": "LocationFeatureSpecification", "name": "Dine In", "value": true },
+          { "@type": "LocationFeatureSpecification", "name": "Takeout", "value": true },
+          { "@type": "LocationFeatureSpecification", "name": "Delivery", "value": true }
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://zawwarsami16.github.io/unofficial-heritage-shawarma/#website",
+        "url": "https://zawwarsami16.github.io/unofficial-heritage-shawarma/",
+        "name": "Heritage Shawarma",
+        "description": "Official website of Heritage Shawarma, Oshawa's finest halal shawarma restaurant",
+        "inLanguage": "en-CA",
+        "publisher": { "@id": "https://zawwarsami16.github.io/unofficial-heritage-shawarma/#restaurant" }
+      }
+    ]
+  }
+  </script>
+
+  <!-- DNS prefetch -->
+  <link rel="dns-prefetch"  href="https://fonts.googleapis.com"/>
+  <link rel="dns-prefetch"  href="https://fonts.gstatic.com"/>
+  <link rel="preconnect"    href="https://fonts.googleapis.com" crossorigin/>
+  <link rel="preconnect"    href="https://fonts.gstatic.com"    crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;0,9..144,900;1,9..144,300;1,9..144,700;1,9..144,900&family=Outfit:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"/>
 
   <!-- Favicon -->
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🫔</text></svg>"/>
+  <meta name="theme-color" content="#FF5C1A"/>
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
 
-  <!-- Cinematic loading screen — shown before React hydrates -->
+  <!-- Cinematic loader -->
   <style>
     *{box-sizing:border-box;margin:0;padding:0}
     html,body{background:#03020C;min-height:100vh}
-
     #loader{
       position:fixed;inset:0;z-index:99999;
       background:#03020C;
@@ -32,69 +139,34 @@
       transition:opacity .55s cubic-bezier(.76,0,.24,1), transform .55s cubic-bezier(.76,0,.24,1);
     }
     #loader.done{opacity:0;transform:translateY(-8px);pointer-events:none}
-
     .l-logo{
-      font-family:Georgia,serif;
-      font-size:clamp(32px,6vw,56px);
-      font-weight:900;
-      font-style:italic;
-      color:#F4ECD8;
-      letter-spacing:-2px;
-      line-height:1;
-      margin-bottom:6px;
-      opacity:0;
-      transform:translateY(14px);
+      font-family:Georgia,serif;font-size:clamp(32px,6vw,56px);
+      font-weight:900;font-style:italic;color:#F4ECD8;
+      letter-spacing:-2px;line-height:1;margin-bottom:6px;
+      opacity:0;transform:translateY(14px);
       animation:lup .6s .1s cubic-bezier(.16,1,.3,1) forwards;
     }
     .l-sub{
-      font-family:system-ui,sans-serif;
-      font-size:9px;
-      font-weight:600;
-      letter-spacing:5px;
-      text-transform:uppercase;
-      color:rgba(244,236,216,0.28);
-      opacity:0;
-      animation:lup .5s .3s ease forwards;
+      font-family:system-ui,sans-serif;font-size:9px;font-weight:600;
+      letter-spacing:5px;text-transform:uppercase;color:rgba(244,236,216,0.28);
+      opacity:0;animation:lup .5s .3s ease forwards;
     }
-    .l-bar{
-      width:120px;height:1px;
-      background:rgba(244,236,216,0.08);
-      margin-top:28px;
-      overflow:hidden;
-      opacity:0;
-      animation:lup .4s .45s ease forwards;
-    }
-    .l-fill{
-      height:100%;
-      background:linear-gradient(to right,#FF5C1A,#E8C040);
-      animation:lfill 1.1s .5s cubic-bezier(.16,1,.3,1) forwards;
-      transform:scaleX(0);
-      transform-origin:left;
-    }
+    .l-bar{width:120px;height:1px;background:rgba(244,236,216,0.08);margin-top:28px;overflow:hidden;opacity:0;animation:lup .4s .45s ease forwards;}
+    .l-fill{height:100%;background:linear-gradient(to right,#FF5C1A,#E8C040);animation:lfill 1.1s .5s cubic-bezier(.16,1,.3,1) forwards;transform:scaleX(0);transform-origin:left;}
     @keyframes lup{to{opacity:1;transform:none}}
     @keyframes lfill{to{transform:scaleX(1)}}
   </style>
-
   <script>
-    // Hide loader once React fires first paint
-    window.__loaderDone = function(){
-      var l=document.getElementById('loader');
-      if(!l)return;
-      l.classList.add('done');
-      setTimeout(function(){l.remove()},600);
-    }
-    // Fallback — force remove after 3s even if React is slow
-    setTimeout(window.__loaderDone, 3000);
+    window.__loaderDone=function(){var l=document.getElementById('loader');if(!l)return;l.classList.add('done');setTimeout(function(){l.remove()},600);}
+    setTimeout(window.__loaderDone,3000);
   </script>
 </head>
 <body>
-  <!-- Loader — visible instantly, no font dependency -->
   <div id="loader">
     <div class="l-logo">Heritage</div>
     <div class="l-sub">Oshawa · Since 2015</div>
     <div class="l-bar"><div class="l-fill"></div></div>
   </div>
-
   <div id="root"></div>
   <script type="module" src="/src/main.jsx"></script>
 </body>

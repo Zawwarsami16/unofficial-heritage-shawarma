@@ -165,17 +165,15 @@ export function HeatBars({ count = 12, color = 'var(--fire)', height = 40 }) {
 }
 
 
-export function NoiseCard({ children, style = {}, glowColor = 'rgba(255,92,26,0.15)', className = '' }) {
+export function NoiseCard({ children, style = {}, glowColor = 'rgba(255,92,26,0.12)', className = '' }) {
   const ref = useRef(null)
   useEffect(() => {
     const el = ref.current
     if (!el) return
     const onMove = e => {
       const rc = el.getBoundingClientRect()
-      const x  = ((e.clientX - rc.left) / rc.width  * 100).toFixed(1)
-      const y  = ((e.clientY - rc.top)  / rc.height * 100).toFixed(1)
-      el.style.setProperty('--gx', `${x}%`)
-      el.style.setProperty('--gy', `${y}%`)
+      el.style.setProperty('--gx', ((e.clientX - rc.left) / rc.width  * 100).toFixed(1) + '%')
+      el.style.setProperty('--gy', ((e.clientY - rc.top)  / rc.height * 100).toFixed(1) + '%')
     }
     el.addEventListener('mousemove', onMove)
     return () => el.removeEventListener('mousemove', onMove)
@@ -184,28 +182,10 @@ export function NoiseCard({ children, style = {}, glowColor = 'rgba(255,92,26,0.
   return (
     <div
       ref={ref}
-      className={className}
-      style={{
-        '--gx': '50%', '--gy': '50%',
-        position: 'relative',
-        background: 'var(--surface)',
-        border: '1px solid var(--line2)',
-        overflow: 'hidden',
-        transition: 'border-color .4s var(--e1)',
-        ...style,
-      }}
-      onMouseEnter={e => e.currentTarget.style.borderColor = 'rgba(255,92,26,0.3)'}
-      onMouseLeave={e => e.currentTarget.style.borderColor = ''}
+      className={`spotlight-card${className ? ' ' + className : ''}`}
+      style={{ '--gx': '50%', '--gy': '50%', ...style }}
     >
-      {/* Radial spotlight follows cursor */}
-      <div style={{
-        position: 'absolute', inset: 0, pointerEvents: 'none', zIndex: 0,
-        background: `radial-gradient(circle at var(--gx) var(--gy), ${glowColor}, transparent 60%)`,
-        transition: 'opacity .3s',
-      }}/>
-      <div style={{ position: 'relative', zIndex: 1 }}>
-        {children}
-      </div>
+      <div style={{ position: 'relative', zIndex: 1 }}>{children}</div>
     </div>
   )
 }
